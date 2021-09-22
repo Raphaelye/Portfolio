@@ -6,8 +6,10 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+
+
 .max-width{
-    max-width:1300px;
+    max-width: 1300px;
     padding:0 80px;
     margin: auto;
 }
@@ -20,7 +22,7 @@
     position: fixed;
     width: 100%;
     padding: 30px 0;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     transition: all 250ms ease;
     z-index: 9999;
 }
@@ -34,6 +36,7 @@
     display: flex;
     align-items:center;
     justify-content: space-between;
+    padding:0 50px;
 }
 .navbar .logo a{
     color:#fff;
@@ -98,7 +101,8 @@
     height: 100vh;
     color:#fff;
     min-height: 500px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
 .home .max-width{
@@ -182,10 +186,13 @@ section .title::after{
 
 section{
     padding: 100px 0;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
 .about{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
 }
 
     
@@ -256,7 +263,7 @@ section{
 /* Service Section Styling */
 
 .service{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #111;
     color: #fff;
 
@@ -298,7 +305,7 @@ section{
 .service .serv-content .card:hover .fa-paint-brush {
     color: #fff;
 }
-.service .serv-content .card:hover .fa-database {
+.service .serv-content .card:hover .fa-database {    
     color: #fff;
 }
 .service .serv-content .card:hover .fa-code {
@@ -337,8 +344,8 @@ section{
 /* Responsive Media Query Starts */
 
 @media (max-width:1300px) {
-    .home .max-width{
-        margin-left: 0px;
+    .max-width{
+        padding: 0 50px;
     }
 }
 @media (max-width:1104px) {
