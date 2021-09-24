@@ -7,13 +7,39 @@
     text-decoration: none;
 }
 
-
+html{
+    scroll-behavior: smooth;
+}
 .max-width{
     max-width: 1300px;
     padding:0 80px;
     margin: auto;
 }
 
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background-color: crimson;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    padding-top:7px;
+    z-index: 9999;
+    color: #fff;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.scroll-up-btn.show{
+    opacity: 1;
+    pointer-events:auto;
+    bottom: 30px;
+}
 
 
 /* Navbar Styling */
@@ -200,7 +226,9 @@ section{
     content: "Who I am";
 }
 
-.about .about-content, .service .serv-content{
+.about .about-content, 
+.service .serv-content, 
+.skills .skills-content{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -262,13 +290,13 @@ section{
 
 /* Service Section Styling */
 
-.service{
+.service, .teams{
     font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #111;
     color: #fff;
 
 }
-.service .title::before{
+.service .title::before {
     background: #fff;
 }
 
@@ -281,7 +309,7 @@ section{
     width: calc(33% - 20px);
     background-color: #222;
     border-radius: 6px;
-    padding: 20px 25px;
+    padding: 40px 45px;
     text-align:center;
     cursor: pointer;
     transition: color 0.3s ease;
@@ -333,6 +361,258 @@ section{
 /* Skills Section Styling */
 
 
+.skills .title::after{
+    content: "What I know";
+}
+
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+
+
+.skills .skills-content .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.skills .skills-content p{
+    font-weight: 500;
+    text-align: justify;
+    font-size: 17px;
+}
+
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+}
+
+.skills .skills-content .right .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills .skills-content .right .line{
+    background-color: #888;
+    height: 4px;
+    width: 100%;
+    margin-top: 5px;
+    position: relative;
+}
+
+.skills .skills-content .right span{
+    font-weight: 500;
+}
+
+.skills .skills-content .right .line::after{
+    content: "";
+    background-color: crimson;
+    position: absolute;
+    height: 4px;
+}
+
+.skills .skills-content .right .html::after {
+    width: 90%;
+}
+.skills .skills-content .right .css::after {
+    width: 75%;
+}
+.skills .skills-content .right .js::after {
+    width: 50%;
+}
+.skills .skills-content .right .jq::after {
+    width: 65%;
+}
+.skills .skills-content .right .rjs::after {
+    width: 10%;
+}
+
+
+
+/* Team section styling */
+.teams{
+    color: #fff;
+}
+
+.teams .title::after{
+    content:"Who's with me";
+    background-color:#111;
+}
+
+.teams .title::before{
+    background-color: #fff;
+}
+
+.teams .carousel .card{
+    padding: 25px 35px;
+    border-radius: 6px;
+    background-color: #444;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.teams .carousel .card:hover{
+    background-color: crimson;
+}
+
+.teams .carousel .card .box:hover{
+    transform: scale(1.05);
+
+}
+
+.teams .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.teams .carousel .card img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid crimson;
+    border-radius: 50%;
+    transition: color 0.3s ease;
+}
+
+.teams .carousel .card:hover img{
+    border:5px solid #fff;
+}
+
+.teams .carousel .text{
+    margin: 10px 0 7px 0;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.owl-dots{
+    text-align: center;
+    margin-top:20px ;
+
+}
+
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    border-radius: 50%;
+    outline: none!important;
+    border: 2px solid crimson!important;
+    transition: color 0.3s ease;
+
+}
+
+.owl-dot.active{
+    width: 35px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+    background-color: crimson!important;
+}
+
+
+/* Contact section Styling */
+
+.contact .title::after{
+    content: "Get in touch";
+}
+
+.contact .contact-content .text{
+    font-size: 25px;
+    text-align: center;
+}
+
+.contact .contact-content .row{
+    margin: 30px 0;
+    display: flex;
+
+}
+
+.contact .contact-content .row .fa-user, 
+.fa-envelope, .fa-map-marker-alt, .fa-phone{
+    font-size: 25px;
+    color: crimson;
+}
+
+.contact .contact-content .row .info {
+    text-align: justify;
+    margin-left: 20px;
+
+}
+
+.contact .contact-content .info .head{
+    font-weight: 600;
+    font-size:19px;
+}
+
+.contact .contact-content hr{
+    margin: 30px 0;
+    color: crimson;
+    width: 100%;
+}
+
+.contact .contact-content .icons-container{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.contact .contact-content .icons{
+    font-size: 60px;
+    text-align: center;
+    width: calc(25% - 30px);
+}
+
+.contact .contact-content p{
+    margin-left: 0px;
+    text-align: center;
+}
+
+.contact .contact-content .fa-facebook{
+    color: #4267B2;
+}
+
+.contact .contact-content .fa-github{
+    color: #171515;
+}
+
+.contact .contact-content .fa-instagram{
+    color: #bc2a8d;
+}
+
+.contact .contact-content .fa-linkedin{
+    color:#0077b5;
+}
+
+
+
+/* Footer section Styling */
+
+footer{
+    background-color: #222;
+    color: #fff;
+    padding: 35px 36px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+}
+
+footer span a{
+    color: crimson;
+}
+
+footer span a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
 
 
 
@@ -342,12 +622,18 @@ section{
 
 
 /* Responsive Media Query Starts */
+@media (max-width:1526px) {
+    .max-width{
+        padding: 0 10px;
+    }
+}
 
 @media (max-width:1300px) {
     .max-width{
         padding: 0 50px;
     }
 }
+
 @media (max-width:1104px) {
     .about .about-content .left img{
         height: 350px;
@@ -438,6 +724,38 @@ section{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
+
+    .skills .skills-content .column{
+        width: calc(50% - 20px);
+    }
+    .skills .skills-content .text{
+        font-size: 23px;
+    }
+    
+    .skills .skills-content p{
+        font-size: 15px;
+    }
+
+
+    .skills .skills-content .column{
+        width: 100%;
+    }
+
+    .skills .skills-content .left{
+        margin-bottom: 25px;
+    }
+
+    
+    .contact .contact-content .icons-container{
+        display: flex;
+    }
+
+    .contact .contact-content .icons{
+        width:calc(50% - 20px);
+        font-size: 55px;
+
+    }
+
 }
 
 @media (max-width:690px) {
@@ -468,11 +786,19 @@ section{
         width: 100%;
         margin-bottom: 20px;
     }
+    .contact .contact-content .icons{
+        width:calc(50% - 20px);
+        font-size: 40px;
 
+    }
 
+    .footer{
+        font-size: 17px;
+    }
     
-   
+
 }
+
 
 @media (max-width:500px) {
 
@@ -488,5 +814,8 @@ section{
         font-size: 22px;
         
     }
-    
+
+    .footer{
+        font-size: 14px;
+    }
 }
