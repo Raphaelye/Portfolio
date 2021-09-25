@@ -45,6 +45,13 @@ $(document).ready(function(){
         $('.menu-btn .fa-times').toggleClass('active')
     });
 
+      
+    $('.navbar .menu li a').click(function(){
+        $('.navbar .menu').toggleClass('active');
+        $('.menu-btn .fa-bars').toggleClass('active')
+        $('.menu-btn .fa-times').toggleClass('active')
+    });
+
     // owl carousel script
 
     $(".carousel").owlCarousel({

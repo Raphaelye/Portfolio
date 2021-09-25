@@ -175,11 +175,12 @@ html{
 
 section .title{
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 40px;
     margin-bottom: 60px;
     padding-bottom: 20px;
     position: relative;
+    color:#555;
 }
 
 section .title::before{
@@ -267,7 +268,6 @@ section{
 
 .about .about-content .right p{
     text-align: justify;
-    font-weight: 600;
 }
 
 .about .about-content .right a{
@@ -296,6 +296,11 @@ section{
     color: #fff;
 
 }
+
+.service .title, .teams .title{
+    color: #fff;
+}
+
 .service .title::before {
     background: #fff;
 }
@@ -685,6 +690,8 @@ footer span a:hover{
         font-size: 25px;
     }
 
+    
+
     .menu-btn{
         z-index: 9999;
         display: block;
@@ -693,19 +700,20 @@ footer span a:hover{
     .home .home-content a{
         font-size: 23px;
         padding: 10px 30px;
-
     }
+
     .navbar .menu-btn .fa-bars.active{
         display:none;
     }
     
-    .navbar .menu-btn .fa-times.active{
+    .navbar .menu-btn .fa-times.active {
         display: block;
     }
+
     .max-width{
         max-width:800px;
-       
     }
+
     .about .about-content .column{
         width: 100%;
     }
