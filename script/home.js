@@ -13,14 +13,8 @@ $(document).ready(function(){
             $('.scroll-up-btn').removeClass('show');
         }
     });
-
-    // Slide up script
-
-    $('.scroll-up-btn').click(function(){
-        $('html').animate({scrollTop: 0});
-    });
-
-
+    
+    
     // typing animation script
     var typed = new Typed(".typing", {
         strings: ["FreeLancer", "Frontend Developer", "Youtuber"],
@@ -78,3 +72,8 @@ $(document).ready(function(){
         }
     });
 });
+
+function scrollFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}

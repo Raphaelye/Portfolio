@@ -117,12 +117,12 @@ html{
 
 .home{
     display: flex;
-    background-image: url(../styles/Images/Screenshot_20210721-224834\ .png);
+    background-image: url(./Images/Screenshot_20210721-224834\ .png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position:center;
     background-attachment: fixed;
-    background-color: #333;
+    background-color: #555;
     background-blend-mode: multiply;
     height: 100vh;
     color:#fff;
@@ -440,7 +440,7 @@ section{
 }
 
 .teams .title::after{
-    content:"Who's with me";
+    content:"Who with me";
     background-color:#111;
 }
 
@@ -821,6 +821,14 @@ footer span a:hover{
     .about .about-content .right .text{
         font-size: 22px;
         
+    }
+
+    .service .title::after{
+        font-size: 18px;
+    }
+
+    .teams .title::after{
+        font-size: 18px;
     }
 
     .footer{
